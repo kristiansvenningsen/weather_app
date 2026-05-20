@@ -31,7 +31,7 @@ print(data)
 rain_list =  [item["weather"][0]["id"] for item in data["list"]]
 print(rain_list)
 
-if any(x < 700 for x in rain_list):
+if any(x < 900 for x in rain_list):
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's gonna rain today 🌧️ Remember to bring an umbrella!",
