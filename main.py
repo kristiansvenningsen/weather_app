@@ -36,7 +36,7 @@ if any(x < 800 for x in rain_list):
     message = client.messages.create(
         body="It's gonna rain today 🌧️ Remember to bring an umbrella!",
         from_="+19069702708",
-        to= ‭"+436645333346"‬, #os.environ.get("YOUR_TWILIO_VERIFIED_REAL_NUMBER")
+        to=os.environ.get("YOUR_TWILIO_VERIFIED_REAL_NUMBER"),
     )
     print("It's gonna rain 🌧️")
     print(message.status)
