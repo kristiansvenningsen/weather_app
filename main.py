@@ -31,12 +31,12 @@ print(data)
 rain_list =  [item["weather"][0]["id"] for item in data["list"]]
 print(rain_list)
 
-if any(x < 700 for x in rain_list):
+if any(x < 800 for x in rain_list):
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's gonna rain today 🌧️ Remember to bring an umbrella!",
         from_="+19069702708",
-        to=os.environ.get("YOUR_TWILIO_VERIFIED_REAL_NUMBER"),
+        to= ‭"+436645333346"‬ #os.environ.get("YOUR_TWILIO_VERIFIED_REAL_NUMBER"),
     )
     print("It's gonna rain 🌧️")
     print(message.status)
